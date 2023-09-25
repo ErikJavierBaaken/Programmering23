@@ -36,13 +36,13 @@ def fetchinput():
 # Define environment
 
 kayak = Item("Kayak", "This kayak can be inflated and used for 2 individuals")
-scubatank = Item("This mouthpiece scubatank can be used for 10 minutes")
-goggles = Item("You'll need this to be able to see underwater")
-fins = Item("To be attached to your feet for faster swimming")
-wetsuit = Item("A full-body suit made of rubber to protect from the colder water in the deep")
-bathingsuit = Item("A piece of clothing to protect your private parts from the elements")
-paddle = Item("A long pole with broad blades on both ends used to move through the water")
-bag = Item("A large and lightweight container to collect and carry your items")
+scubatank = Item("Scubatank", "This mouthpiece scubatank can be used for 10 minutes")
+goggles = Item("Goggles", "You'll need this to be able to see underwater")
+fins = Item("Fins", "To be attached to your feet for faster swimming")
+wetsuit = Item("Wetsuit", "A full-body suit made of rubber to protect from the colder water in the deep")
+bathingsuit = Item("Bathingsuit", "A piece of clothing to protect your private parts from the elements")
+paddle = Item("Paddle", "A long pole with broad blades on both ends used to move through the water")
+bag = Item("Bag", "A large and lightweight container to collect and carry your items")
 
 # Define your Hut
 hut = My_Hut("Hut")
@@ -64,3 +64,29 @@ run = True
 while run:
     #Display the hut you are in.
     print(world.tostring())
+
+    # Display main menu for user.
+    displaymenu()
+
+    # Ask user for input
+    choice = fetchinput()
+
+    # Check user input
+    if choice == -1:
+        print("Your input is incorrect, Try again with the numeric alternatives provided")
+        continue
+
+    # Do something based on what the player asks for.
+    # if the player enters something you don't understand, let him know.
+    if choice == 0:
+        run = False
+    elif choice == 1:
+        print("Your clothing choice will determine the mood for the remainder of your adventure")
+    elif choice == 2:
+        print("Adventure is waiting outside for you, who cares what you are wearing")
+    elif choice == 3:
+        print("Clothes are irrelevant, but you wonder if the outside world will require special attire")
+    elif choice == 4:
+        print("You collect the items in the Hut and make your way out")
+    elif choice == 5:
+        world.lookcloser()

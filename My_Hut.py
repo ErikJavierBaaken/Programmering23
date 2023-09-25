@@ -5,7 +5,7 @@ class My_Hut:
     def __init__(self, name):               # Self is used to reference your own objects. E.g. name
         self.name = name                    # The class itself name is assigned name send to the init function.
         self.items = []                      # define a couple of variables.
-        self.huts = []
+        self.opening = []
         self.description = ""
         self.inspect = ""
 
@@ -18,8 +18,8 @@ class My_Hut:
         self.items.append(item)
 
     # When we have openings in the hut we are assigning them to this.
-    def addhut(self, hut):
-        self.huts.append(hut)
+    def addopening(self, hut):
+        self.opening.append(hut)
 
     # Set a description if we are looking close at the hut
     def setinspect(self, inspect):
