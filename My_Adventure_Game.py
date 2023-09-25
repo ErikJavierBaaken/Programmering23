@@ -45,17 +45,15 @@ paddle = Item("Paddle", "A long pole with broad blades on both ends used to move
 bag = Item("Bag", "A large and lightweight container to collect and carry your items")
 
 # Define your Hut
-hut = My_Hut("Hut")
+hut = My_Hut("Hut", "The Hut seems to be the only one around, with no neighbours to be seen for miles")
 hut.setdescription("The hut is illuminated by the two small windows opposite of each other and the round opening in the high ceiling. There seems to be an opening in the middle that looks like a small split in the wall")
 hut.addopening("The split in the wall")
 
-outside = My_Hut("Dock")
-outside.setdescription("A structure lining up vessels")
 
 #################################
 #Main program
 
-world = [hut]
+world = hut
 
 welcomescreen()
 

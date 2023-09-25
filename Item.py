@@ -14,5 +14,5 @@ class Item:
         return self.description
 
     # return string representation of item
-    def ToString(self):
-        return name + "\n" + description
+    def tostring(self):
+        return self.name + "\n" + self.description

@@ -2,9 +2,10 @@
 class My_Hut:
 
     # Constructor or init method. This is run automatically when an object or specific place in the world gets created.
-    def __init__(self, name):               # Self is used to reference your own objects. E.g. name
+    def __init__(self, name, description):               # Self is used to reference your own objects. E.g. name
         self.name = name                    # The class itself name is assigned name send to the init function.
         self.items = []                      # define a couple of variables.
+        self.hut = []
         self.opening = []
         self.description = ""
         self.inspect = ""
@@ -41,7 +42,7 @@ class My_Hut:
         response = response + "There are more huts out there!"
         # Format and print out all the directions that are available in the hut.
         directions = ""
-        for direction in self.huts:
+        for direction in self.hut:
             directions = directions + ", " + direction
         directions = directions[2:]
         response = response + directions + "\n\n"
