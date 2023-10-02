@@ -27,7 +27,7 @@ def displaymenu():
 def fetchinput():
     ans = input("Please enter your choice: ")
     if ans.isdigit():                          # True if ans is a number, False if it is something else
-        if 0 <= int(ans) < 4:                  # Check if the input is between 0 and 3
+        if 0 <= int(ans) and int(ans) < 4:     # Check if the input is between 0 and 3
             return int(ans)
     return -1                                  # Will return -1 if the other conditions are false.
 
